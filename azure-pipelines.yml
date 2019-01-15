@@ -17,3 +17,20 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- checkout: self
+  persistCredentials: true
+  clean: true
+
+- powershell: |
+   git --version
+   New-Item -Path "$(System.DefaultWorkingDirectory)" -Name "testfile1.txt" -ItemType "file" -Value "This is a text string."
+   Write-Host "new file created, now adding file to git"
+   git add -A
+   Write-Host "setup author info"
+   git config user.email samiya@samiya.ca
+   git config user.name "samiya bot"
+   Write-Host "git commit with message"
+   git commit -a -m "Test Commit from Azure DevOps"
+   Write-Host "git push"
+   git push
