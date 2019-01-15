@@ -22,7 +22,7 @@ steps:
 
 - script: |
    git --version
-   git clone https://github.com/samiyaakhtar/solid-doodle.git
+   git clone git@github.com:samiyaakhtar/solid-doodle.git
    cd solid-doodle
    git checkout master
    #Create dummy file
@@ -31,7 +31,7 @@ steps:
    touch $DATE.log
    ls -a
    git add $DATE.log
-   
+
    echo "new file created, now adding file to git"
    git add -A
    echo "setup author info"
