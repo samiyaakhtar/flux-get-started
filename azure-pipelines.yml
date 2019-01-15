@@ -16,20 +16,14 @@ resources:
     source: samiyaakhtar/solid-doodle
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-
 - checkout: secondaryRepo
   # persistCredentials: true
   clean: true
 
 - powershell: |
    git --version
+   git clone https://github.com/samiyaakhtar/solid-doodle.git
+   cd solid-doodle
    git checkout master
    New-Item -Path "$(System.DefaultWorkingDirectory)" -Name "testfile.txt" -ItemType "file" -Value "This is a text string."
    Write-Host "new file created, now adding file to git"
