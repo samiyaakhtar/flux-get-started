@@ -9,6 +9,12 @@ trigger:
 pool:
   vmImage: 'Ubuntu-16.04'
 
+resources:         
+  repositories:
+  - repository: secondaryRepo      
+    type: GitHub
+    source: samiyaakhtar/solid-doodle
+
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
@@ -18,7 +24,7 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- checkout: samiyaakhtar/solid-doodle
+- checkout: secondaryRepo
   persistCredentials: true
   clean: true
 
