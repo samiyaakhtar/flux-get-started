@@ -20,18 +20,24 @@ steps:
   # persistCredentials: true
   # clean: true
 
-- powershell: |
+- script: |
    git --version
    git clone https://github.com/samiyaakhtar/solid-doodle.git
    cd solid-doodle
    git checkout master
-   New-Item -Path "$(System.DefaultWorkingDirectory)" -Name "testfile1.txt" -ItemType "file" -Value "This is a text string."
-   Write-Host "new file created, now adding file to git"
+   #Create dummy file
+   echo "Creating file"
+   DATE=$(date +"%Y%m%d%H%M")
+   touch $DATE.log
+   ls -a
+   git add $DATE.log
+   
+   echo "new file created, now adding file to git"
    git add -A
-   Write-Host "setup author info"
+   echo "setup author info"
    git config user.email samiya@samiya.ca
    git config user.name "samiya bot"
-   Write-Host "git commit with message"
+   echo "git commit with message"
    git commit -a -m "Test Commit from Azure DevOps"
-   Write-Host "git push"
+   echo "git push"
    git push
