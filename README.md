@@ -1,5 +1,7 @@
 # flux-get-started
 
+This is a test repo to test CI/CD from azure pipelines.
+
 We published a step-by-step run-through on how to use Flux and Helm Operator [over
 here](https://github.com/weaveworks/flux/blob/master/site/helm-get-started.md).
 
