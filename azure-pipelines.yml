@@ -9,16 +9,16 @@ trigger:
 pool:
   vmImage: 'Ubuntu-16.04'
 
-resources:         
-  repositories:
-  - repository: secondaryRepo      
-    type: GitHub
-    source: samiyaakhtar/solid-doodle
+# resources:         
+#   repositories:
+#   - repository: secondaryRepo      
+#     type: GitHub
+#     source: samiyaakhtar/solid-doodle
 
 steps:
-- checkout: secondaryRepo
+# - checkout: secondaryRepo
   # persistCredentials: true
-  clean: true
+  # clean: true
 
 - powershell: |
    git --version
