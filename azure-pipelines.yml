@@ -25,7 +25,7 @@ steps:
   displayName: 'Run a multi-line script'
 
 - checkout: secondaryRepo
-  persistCredentials: true
+  # persistCredentials: true
   clean: true
 
 - powershell: |
