@@ -29,8 +29,8 @@ steps:
 
 - script: |
    git --version
-   git clone git@ssh.dev.azure.com:v3/epicstuff/samiya-test/samiya-test
-   cd samiya-test
+   git clone git@github.com:samiyaakhtar/solid-doodle.git
+   cd solid-doodle
    git checkout master
 
    # Create dummy file
@@ -48,4 +48,4 @@ steps:
    echo "git commit with message"
    git commit -a -m "Test Commit from Azure DevOps"
    echo "git push"
-   git push
+   git push https://d5e41185156ca8f498fde51e3a86620be885dd22@github.com/samiyaakhtar/flux-get-started.git
