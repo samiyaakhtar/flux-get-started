@@ -47,7 +47,7 @@ steps:
    git commit --allow-empty -a -m "Test Commit from Azure DevOps"
    git remote set-url origin git@github.com:samiyaakhtar/solid-doodle.git
    Write-Host "git push"
-   git push https://pat@github.com/samiyaakhtar/flux-get-started.git
+   git push https://$(accesstoken)@github.com/samiyaakhtar/solid-doodle.git
 
 # - checkout: destinationRepo  
 #   clean: false
