@@ -13,7 +13,7 @@ resources:
   repositories:
   - repository: secondaryRepo
     type: github
-    source: samiyaakhtar/solid-doodle
+    name: samiyaakhtar/solid-doodle
 
 steps:
 - script: echo Hello, world!
