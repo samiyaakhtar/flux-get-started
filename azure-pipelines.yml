@@ -14,7 +14,7 @@ resources:
   - repository: destinationRepo
     type: github
     name: samiyaakhtar/solid-doodle
-    endpoint: destination-repo-test
+    endpoint: solid-doodle-pat
 
 steps:
 - script: echo Hello, world!
