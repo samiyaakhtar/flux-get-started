@@ -20,6 +20,23 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
   
+- checkout: self
+  persistCredentials: true
+  clean: true
+
+- powershell: |
+   git --version
+   New-Item -Path "$(System.DefaultWorkingDirectory)" -Name "testfile1.txt" -ItemType "file" -Value "This is a text string."
+   Write-Host "new file created, now adding file to git"
+   git add -A
+   Write-Host "setup author info"
+   git config user.email you@you.com
+   git config user.name "your name"
+   Write-Host "git commit with message"
+   git commit -a -m "Test Commit from Azure DevOps"
+   Write-Host "git push"
+   git push
+
 # - checkout: destinationRepo  
 #   clean: false
 #   fetchDepth: 5
@@ -27,25 +44,25 @@ steps:
 #   submodules: true
 #   persistCredentials: true
 
-- script: |
-   git --version
-   git clone git@github.com:samiyaakhtar/solid-doodle.git
-   cd solid-doodle
-   git checkout master
+# - script: |
+#    git --version
+#    git clone git@github.com:samiyaakhtar/solid-doodle.git
+#    cd solid-doodle
+#    git checkout master
 
-   # Create dummy file
-   echo "Creating file"
-   DATE=$(date +"%Y%m%d%H%M")
-   touch $DATE.log
-   ls -a
-   git add $DATE.log
+#    # Create dummy file
+#    echo "Creating file"
+#    DATE=$(date +"%Y%m%d%H%M")
+#    touch $DATE.log
+#    ls -a
+#    git add $DATE.log
 
-   echo "new file created, now adding file to git"
-   git add -A
-   echo "setup author info"
-   git config user.email samiya@samiya.ca
-   git config user.name "samiya bot"
-   echo "git commit with message"
-   git commit -a -m "Test Commit from Azure DevOps"
-   echo "git push"
-   git push https://d5e41185156ca8f498fde51e3a86620be885dd22@github.com/samiyaakhtar/solid-doodle.git
+#    echo "new file created, now adding file to git"
+#    git add -A
+#    echo "setup author info"
+#    git config user.email samiya@samiya.ca
+#    git config user.name "samiya bot"
+#    echo "git commit with message"
+#    git commit -a -m "Test Commit from Azure DevOps"
+#    echo "git push"
+#    git push 
