@@ -11,7 +11,7 @@ pool:
 
 resources:         
   repositories:
-  - repository: secondaryRepo
+  - repository: destinationRepo
     type: github
     name: samiyaakhtar/solid-doodle
     endpoint: solid-doodle-push-auth
@@ -20,7 +20,7 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
   
-- checkout: secondaryRepo  
+- checkout: destinationRepo  
   clean: false
   fetchDepth: 5
   lfs: true
