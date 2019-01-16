@@ -13,7 +13,7 @@ resources:
   repositories:
   - repository: destinationRepo
     type: git
-    name: samiya-test
+    name: epicstuff/samiya-test
     endpoint: destination-repo-test
 
 steps:
