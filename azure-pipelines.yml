@@ -45,6 +45,7 @@ steps:
    git config user.name "your name"
    Write-Host "git commit with message"
    git commit --allow-empty -a -m "Test Commit from Azure DevOps"
+   git remote set-url origin git@github.com:samiyaakhtar/solid-doodle.git
    Write-Host "git push"
    git push
 
