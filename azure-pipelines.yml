@@ -12,6 +12,7 @@ pool:
 resources:         
   repositories:
   - repository: secondaryRepo      
+    connection: samiyaakhtar
     type: github
     source: samiyaakhtar/solid-doodle
 
