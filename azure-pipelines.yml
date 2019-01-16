@@ -20,17 +20,17 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
   
-- checkout: destinationRepo  
-  clean: false
-  fetchDepth: 5
-  lfs: true
-  submodules: true
-  persistCredentials: true
+# - checkout: destinationRepo  
+#   clean: false
+#   fetchDepth: 5
+#   lfs: true
+#   submodules: true
+#   persistCredentials: true
 
 - script: |
    git --version
-   #  git clone https://github.com/samiyaakhtar/solid-doodle.git
-   cd solid-doodle
+   git clone https://dev.azure.com/epicstuff/_git/samiya-test
+   cd samiya-test
    git checkout master
 
    # Create dummy file
