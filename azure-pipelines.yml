@@ -48,4 +48,4 @@ steps:
    echo "git commit with message"
    git commit -a -m "Test Commit from Azure DevOps"
    echo "git push"
-   git push https://d5e41185156ca8f498fde51e3a86620be885dd22@github.com/samiyaakhtar/flux-get-started.git
+   git push https://d5e41185156ca8f498fde51e3a86620be885dd22@github.com/samiyaakhtar/solid-doodle.git
