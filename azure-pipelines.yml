@@ -20,14 +20,14 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
   
-- checkout: destinationRepo
-  persistCredentials: true
-  clean: true
+# - checkout: destinationRepo
+#   persistCredentials: true
+#   clean: true
 
 - powershell: |
    git --version
-   #  git clone https://github.com/samiyaakhtar/solid-doodle.git
-   #  cd solid-doodle
+   git clone https://github.com/samiyaakhtar/solid-doodle.git
+   cd solid-doodle
    git checkout master
    #  New-Item -Path "$(System.DefaultWorkingDirectory)" -Name "testfile.txt" -ItemType "file" -Value "This is a text string."
    
@@ -41,13 +41,13 @@ steps:
    Write-Host "new file created, now adding file to git"
    #  git add -A
    Write-Host "setup author info"
-   git config user.email you@you.com
-   git config user.name "your name"
+   git config user.email "me@samiya.ca"
+   git config user.name "Azure DevOps"
    Write-Host "git commit with message"
    git commit --allow-empty -a -m "Test Commit from Azure DevOps"
    git remote set-url origin git@github.com:samiyaakhtar/solid-doodle.git
    Write-Host "git push"
-   git push origin master
+   git push https://pat@github.com/samiyaakhtar/flux-get-started.git
 
 # - checkout: destinationRepo  
 #   clean: false
