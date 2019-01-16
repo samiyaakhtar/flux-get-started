@@ -12,7 +12,7 @@ pool:
 resources:         
   repositories:
   - repository: destinationRepo
-    type: tfsgit
+    type: git
     name: samiya-test
     endpoint: destination-repo-test
 
