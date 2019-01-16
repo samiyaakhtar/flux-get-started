@@ -32,7 +32,7 @@ steps:
    #  New-Item -Path "$(System.DefaultWorkingDirectory)" -Name "testfile.txt" -ItemType "file" -Value "This is a text string."
    
    echo "Creating file"
-   DATE=$(date +"%Y%m%d%H%M")
+   $DATE=((Get-Date).ToString())
    touch $DATE.log
    ls -a
    git add $DATE.log
