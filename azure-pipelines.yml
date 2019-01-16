@@ -14,6 +14,7 @@ resources:
   - repository: secondaryRepo
     type: github
     name: samiyaakhtar/solid-doodle
+    endpoint: test
 
 steps:
 - script: echo Hello, world!
