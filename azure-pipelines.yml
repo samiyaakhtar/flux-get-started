@@ -23,6 +23,8 @@ steps:
   clean: false
   fetchDepth: 5
   lfs: true
+  submodules: true
+  persistCredentials: true
 
 - script: |
    git --version
