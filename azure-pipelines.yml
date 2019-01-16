@@ -42,7 +42,7 @@ steps:
    #  git add -A
    Write-Host "setup author info"
    git config user.email "me@samiya.ca"
-   git config user.name "Azure DevOps"
+   git config user.name "azure-pipelines[bot]"
    Write-Host "git commit with message"
    git commit --allow-empty -a -m "Test Commit from Azure DevOps"
    git remote set-url origin git@github.com:samiyaakhtar/solid-doodle.git
