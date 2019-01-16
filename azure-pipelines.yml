@@ -29,7 +29,7 @@ steps:
 
 - script: |
    git --version
-   git clone https://dev.azure.com/epicstuff/_git/samiya-test
+   git clone git@ssh.dev.azure.com:v3/epicstuff/samiya-test/samiya-test
    cd samiya-test
    git checkout master
 
