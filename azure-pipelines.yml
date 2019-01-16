@@ -12,7 +12,7 @@ pool:
 resources:         
   repositories:
   - repository: secondaryRepo      
-    type: GitHub
+    type: github
     source: samiyaakhtar/solid-doodle
 
 steps:
