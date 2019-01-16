@@ -11,15 +11,18 @@ pool:
 
 resources:         
   repositories:
-  - repository: secondaryRepo      
-    connection: samiyaakhtar
+  - repository: secondaryRepo
     type: github
     source: samiyaakhtar/solid-doodle
 
 steps:
-- checkout: secondaryRepo
-  persistCredentials: true
-  clean: true
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+  
+- checkout: secondaryRepo  
+  clean: false
+  fetchDepth: 5
+  lfs: true
 
 - script: |
    git --version
