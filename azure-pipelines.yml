@@ -38,7 +38,7 @@ steps:
    git add $DATE.log
 
    Write-Host "new file created, now adding file to git"
-   git add -A
+   #  git add -A
    Write-Host "setup author info"
    git config user.email you@you.com
    git config user.name "your name"
