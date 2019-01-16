@@ -12,9 +12,9 @@ pool:
 resources:         
   repositories:
   - repository: destinationRepo
-    type: github
-    name: samiyaakhtar/solid-doodle
-    endpoint: solid-doodle-test
+    type: tfsgit
+    name: samiya-test
+    endpoint: destination-repo-test
 
 steps:
 - script: echo Hello, world!
