@@ -9,20 +9,20 @@ trigger:
 pool:
   vmImage: 'Ubuntu-16.04'
 
-# resources:         
-#   repositories:
-#   - repository: secondaryRepo      
-#     type: GitHub
-#     source: samiyaakhtar/solid-doodle
+resources:         
+  repositories:
+  - repository: secondaryRepo      
+    type: GitHub
+    source: samiyaakhtar/solid-doodle
 
 steps:
-# - checkout: secondaryRepo
-#   persistCredentials: true
-#   clean: true
+- checkout: secondaryRepo
+  persistCredentials: true
+  clean: true
 
 - script: |
    git --version
-   git clone https://github.com/samiyaakhtar/solid-doodle.git
+   #  git clone https://github.com/samiyaakhtar/solid-doodle.git
    cd solid-doodle
    git checkout master
 
