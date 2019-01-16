@@ -9,12 +9,12 @@ trigger:
 pool:
   vmImage: 'Ubuntu-16.04'
 
-resources:         
-  repositories:
-  - repository: destinationRepo
-    type: git
-    name: epicstuff/samiya-test
-    endpoint: destination-repo-test
+# resources:         
+#   repositories:
+#   - repository: destinationRepo
+#     type: git
+#     name: epicstuff/samiya-test
+#     endpoint: destination-repo-test
 
 steps:
 - script: echo Hello, world!
