@@ -14,7 +14,7 @@ resources:
   - repository: secondaryRepo
     type: github
     name: samiyaakhtar/solid-doodle
-    endpoint: test
+    endpoint: solid-doodle-push-auth
 
 steps:
 - script: echo Hello, world!
