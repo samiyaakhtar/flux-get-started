@@ -33,7 +33,8 @@ steps:
    
    echo "Creating file"
    $DATE=((Get-Date).ToString())
-   touch $DATE.log
+   echo $null >> $DATE.log
+   #  touch $DATE.log
    ls -a
    git add $DATE.log
 
