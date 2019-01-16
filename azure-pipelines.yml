@@ -17,15 +17,16 @@ pool:
 
 steps:
 # - checkout: secondaryRepo
-  # persistCredentials: true
-  # clean: true
+#   persistCredentials: true
+#   clean: true
 
 - script: |
    git --version
-   git clone git@github.com:samiyaakhtar/solid-doodle.git
+   git clone https://github.com/samiyaakhtar/solid-doodle.git
    cd solid-doodle
    git checkout master
-   #Create dummy file
+
+   # Create dummy file
    echo "Creating file"
    DATE=$(date +"%Y%m%d%H%M")
    touch $DATE.log
